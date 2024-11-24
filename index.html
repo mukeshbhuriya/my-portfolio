@@ -257,10 +257,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
-      // Mobile Menu Toggle
-      document.querySelector(".mobile-menu").addEventListener("click", () => {
-        document.querySelector(".nav-links").classList.toggle("active");
-      });
+      const navLinks = document.querySelector(".nav-links");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      mobileMenu.addEventListener("click", () => navLinks.classList.toggle("active"));
+      navLinks.addEventListener("click", (event) => {navLinks.classList.remove("active");});
     </script>
   </body>
 </html>
